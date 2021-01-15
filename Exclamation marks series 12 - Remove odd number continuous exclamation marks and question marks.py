@@ -1,4 +1,5 @@
 # https://www.codewars.com/kata/57fb0f3f9610ced69000023c
+
 def remove(s):
     for i in range(2):
         t = ''
