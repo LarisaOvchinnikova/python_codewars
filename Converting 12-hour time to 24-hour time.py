@@ -7,3 +7,9 @@ def to24hourtime(hour, minute, period):
     minute = str(minute).rjust(2, "0")
     hour = str(hour).rjust(2, "0")
     return hour + minute
+
+# 2 case
+from datetime import datetime
+def to24hourtime(h, m, p):
+    s = str(h).rjust(2,"0")+str(m).rjust(2,"0")+p
+    return datetime.strptime(s, '%I%M%p').strftime('%H%M')
