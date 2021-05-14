@@ -3,8 +3,12 @@ def dollar_to_speech(v):
     v = v.replace("$", "").split(".")
     if v[0][0] == '-':
         return 'No negative numbers are allowed!'
+    if v[0] == '1' and v[1] == '01':
+        return '1 dollar and 1 cent.'
     if v[0] == '1' and v[1] == '00':
         return f'{v[0]} dollar.'
+    if v[0] == '1':
+        return '1 dollar and {v[1]} cents.'
     if v[1] == '00':
         return f'{v[0]} dollars.'
     if v[0] == '0' and v[1] == '01':
